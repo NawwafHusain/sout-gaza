@@ -1,113 +1,128 @@
+import {
+  ArrowRightCircle,
+  Briefcase,
+  House,
+  PersonStanding,
+} from "lucide-react";
 import Image from "next/image";
+import { Cairo } from "next/font/google";
+
+import CarsouelComponents from "./components/CarsouelComponents";
+import Help from "./components/Help";
+
+const cairo = Cairo({ subsets: ["latin"] });
+``;
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+    <main>
+      <section className="w-screen lg:h-[90vh] h-auto flex flex-col lg:flex-row items-center justify-center lg:px-20 px-4 gap-4 relative ">
+        <div className="flex flex-col items-center md:items-start justify-center lg:gap-4 gap-8 md:w-[50vw] text-center lg:text-left relative w-full md:h-auto  pt-10">
+          <h1 className="md:text-7xl text-6xl  font-bold ">
+            Let it Bring <span>Hope</span>
+            <br /> Let it Be a Tale.
+          </h1>
+          <p className="w-[80%] text-lg">
+            Join us in our mission to provide a stable future for Gazans.
+          </p>
+          <div className="flex flex-col items-start gap-4">
+            <div className="flex justify-center items-center gap-4">
+              <Briefcase className="text-white w-12  h-12 bg-primary rounded-full p-2" />
+              <p className="text-lg font-bold text-left">
+                80% of Gazans
+                <br />{" "}
+                <span className="text-muted-foreground font-normal">
+                  are currently unemployed
+                </span>
+              </p>
+            </div>
+            <div className="flex justify-center items-center gap-4">
+              <House className="text-white w-12  h-12 bg-primary rounded-full p-2" />
+              <p className="text-lg font-bold text-left">
+                65% of Buildings
+                <br />{" "}
+                <span className="text-muted-foreground font-normal">
+                  in Gaza have been destroyed{" "}
+                </span>
+              </p>
+            </div>
+            <div className="flex justify-center items-center gap-4">
+              <PersonStanding className="text-white w-12  h-12 bg-primary rounded-full p-2" />
+              <p className="text-lg font-bold text-left">
+                1.7 million people
+                <br />{" "}
+                <span className="text-muted-foreground font-normal">
+                  in Gaza are currently displaced{" "}
+                </span>
+              </p>
+            </div>
+          </div>
+
           <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="bg-primary text-white text-2xl font-bold py-4 pr-20 pl-8 rounded-full   flex justify-between items-center gap-4 mt-14 relative hover:bg-green-800"
+            href="#help"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+            Learn how you can help
+            <ArrowRightCircle className="w-12 h-12 text-primary-foreground absolute right-2" />
           </a>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+        <CarsouelComponents />
+        {/* <Image
+          src="/images/rubble1.avif"
+          width={1000}
+          height={1000}
+          className="w-full md:w-[48vw] md:h-[70vh] h-[50vh] object-cover rounded-2xl relative"
+        /> */}
+      </section>
+      <section className="w-screen flex-col-reverse lg:flex-row md:h-[90vh] mt-[15vh] lg:pt-[35vh] flex items-start justify-between px-20  gap-10 relative  md:-translate-y-[14vh] bg-green-100 lg:bg-transparent ">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={"/images/section2bg.png"}
+          width={1000}
+          height={1000}
+          className="w-screen absolute left-0   lg:top-0 -top-[15vh] -z-10"
         />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+        <div className="md:w-[40vw] flex flex-col gap-4">
+          <h2 className={`text-3xl font-bold   ${cairo.className}`}>
+            Who are we?{" "}
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          <p className={`text-2xl   ${cairo.className} lg:h-[40vh]`}>
+            <br />
+            &quot;Voices of Gaza&quot; is a non-profit volunteer group that
+            seeks to help our people in Gaza find suitable job opportunities and
+            empower them professionally, in line with their skills. Priority is
+            given to citizens of the Gaza Strip residing there, with a focus on
+            Gazan women to find job opportunities for them in the Strip, or
+            remotely. Voice of Gaza works with job seekers to prepare CVs in
+            Arabic, English and French and train them for job interviews
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+          <p className={`text-2xl   ${cairo.className}`}>
+            Kindly send your CVs to
+            <br />
+            <span className="font-bold">CV@SoutGaza.com</span>
+          </p>
+        </div>
+        <div className="md:w-[40vw] flex flex-col gap-4">
+          <h2 className={`text-3xl font-bold text-right ${cairo.className}`}>
+            مَنْ نحن؟
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+          <p className={`text-2xl text-right ${cairo.className} lg:h-[40vh]`}>
+            <br />
+            &quot;صوت غزة&quot; مجموعة تطوعية غير ربحية، تسعى لمساعدة أهلنا في
+            غزة لإيجاد فرص عمل مناسبة، وتمكينهم مهنياً، بما يتوافق مع مهاراتهم.
+            الأولوية لمواطني قطاع غزة المقيمين فيه، مع تركيز على الغزيات لإيجاد
+            فرص عمل لهنّ في القطاع، أو عن بعد. &quot;صوت غزة&quot; تعمل مع طالبي
+            الوظائف لإعداد سير ذاتية باللغات العربية والإنجليزية والفرنسية
+            وتدريبهم على مقابلات العمل.
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
+          <p className={`text-2xl text-right ${cairo.className}`}>
+            يرجى إرسال السير الذاتية إلى
+            <br />
+            <span className="font-bold">CV@SoutGaza.com</span>
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        </div>
+      </section>
+      <Help />
     </main>
   );
 }

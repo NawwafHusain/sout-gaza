@@ -60,7 +60,7 @@ export default function Help() {
           ref={sectionRef}
         >
           <h1 className="text-4xl mb-4 font-bold">
-            Share "Sout Gaza"'s website
+            Share Sout Gaza&apos;s website
           </h1>
           <p className="w-[30vw]">
             Tempor enim irure mollit tempor tempor pariatur velit cillum elit ex
@@ -77,7 +77,7 @@ export default function Help() {
           ref={sectionRef1}
         >
           <h1 className="text-4xl mb-4 font-bold">
-            Share "Sout Gaza"'s website
+            Share Sout Gaza&apos;s website
           </h1>
           <p className="w-[30vw]">
             Tempor enim irure mollit tempor tempor pariatur velit cillum elit ex
@@ -94,7 +94,7 @@ export default function Help() {
           ref={sectionRef2}
         >
           <h1 className="text-4xl mb-4 font-bold">
-            Share "Sout Gaza"'s website
+            Share Sout Gaza&apos;s website
           </h1>
           <p className="w-[30vw]">
             Tempor enim irure mollit tempor tempor pariatur velit cillum elit ex

@@ -16,7 +16,9 @@ export default function Footer() {
         />
         <p className="text-center text-3xl font-bold">Sout Gaza</p>
         <p className="text-xl text-center">Contact: CV@SoutGaza.com </p>
-        <p className="text-xl text-center">Send CV's to: CV@SoutGaza.com </p>
+        <p className="text-xl text-center">
+          Send CV&apos;s to: CV@SoutGaza.com{" "}
+        </p>
       </div>
       <div className="flex h-full items-center gap-8">
         <svg

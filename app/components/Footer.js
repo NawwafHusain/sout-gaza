@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="absolute w-full left-0 border-b-4 border-black top-1" />
       <div className="flex flex-col justify-start items-start">
         <Image
-          src="/images/logo.png"
+          src="/images/Logo.png"
           width={300}
           height={300}
           className="lg:w-[11vw] object-contain"

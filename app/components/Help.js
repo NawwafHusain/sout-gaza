@@ -59,22 +59,52 @@ export default function Help() {
           className="flex-1 h-[100vh] flex justify-center flex-col items-start"
           ref={sectionRef}
         >
-          <h1 className="text-4xl">ShaRE "Sout Gaza"'s website</h1>
-          <p>Sharing on Social Media Can be t</p>
+          <h1 className="text-4xl mb-4 font-bold">
+            Share "Sout Gaza"'s website
+          </h1>
+          <p className="w-[30vw]">
+            Tempor enim irure mollit tempor tempor pariatur velit cillum elit ex
+            ex occaecat mollit. Minim elit ipsum officia do do mollit nisi amet
+            ut exercitation non occaecat. Pariatur amet minim labore officia.
+            Deserunt commodo adipisicing adipisicing culpa duis in. Ut commodo
+            aliqua mollit dolore excepteur adipisicing sit excepteur. Eu anim
+            veniam laborum incididunt qui ullamco consequat aute enim anim
+            deserunt nisi fugiat.
+          </p>
         </div>
         <div
           className="flex-1 h-[100vh] flex justify-center flex-col items-start"
           ref={sectionRef1}
         >
-          <h1 className="text-4xl">Share on Social Media</h1>
-          <p>Sharing on Social Media Can be t</p>
+          <h1 className="text-4xl mb-4 font-bold">
+            Share "Sout Gaza"'s website
+          </h1>
+          <p className="w-[30vw]">
+            Tempor enim irure mollit tempor tempor pariatur velit cillum elit ex
+            ex occaecat mollit. Minim elit ipsum officia do do mollit nisi amet
+            ut exercitation non occaecat. Pariatur amet minim labore officia.
+            Deserunt commodo adipisicing adipisicing culpa duis in. Ut commodo
+            aliqua mollit dolore excepteur adipisicing sit excepteur. Eu anim
+            veniam laborum incididunt qui ullamco consequat aute enim anim
+            deserunt nisi fugiat.
+          </p>
         </div>
         <div
           className="flex-1 h-[100vh] flex justify-center flex-col items-start"
           ref={sectionRef2}
         >
-          <h1 className="text-4xl">Let it be a tale.</h1>
-          <p>Sharing on Social Media Can be t</p>
+          <h1 className="text-4xl mb-4 font-bold">
+            Share "Sout Gaza"'s website
+          </h1>
+          <p className="w-[30vw]">
+            Tempor enim irure mollit tempor tempor pariatur velit cillum elit ex
+            ex occaecat mollit. Minim elit ipsum officia do do mollit nisi amet
+            ut exercitation non occaecat. Pariatur amet minim labore officia.
+            Deserunt commodo adipisicing adipisicing culpa duis in. Ut commodo
+            aliqua mollit dolore excepteur adipisicing sit excepteur. Eu anim
+            veniam laborum incididunt qui ullamco consequat aute enim anim
+            deserunt nisi fugiat.
+          </p>
         </div>
       </div>
       <div className="h-[100vh] flex justify-center items-center w-full md:w-[40vw] sticky top-0">

@@ -8,7 +8,7 @@ export default function Nav() {
   const path = usePathname();
 
   return (
-    <nav className="w-full lg:flex-row flex-col  flex  items-center px-24 lg:pt-4 pt-2  pb-4 bg-green-100">
+    <nav className="w-full lg:flex-row flex-col  flex  items-center px-24 lg:pt-4 pt-2  pb-6 border-b-4 border-primary relative">
       <Image
         src="/images/logo.png"
         width={300}
@@ -22,8 +22,11 @@ export default function Nav() {
         <Link href={"/about"} className={`${path == "/about" && "underline"}`}>
           <li className="hover:font-bold">About Us</li>
         </Link>
-        <Link href={"/heros"} className={`${path == "/heros" && "underline"}`}>
-          <li className="hover:font-bold">Gazan Heros</li>
+        <Link
+          href={"/talents"}
+          className={`${path == "/talents" && "underline"}`}
+        >
+          <li className="hover:font-bold">Gazan Talents</li>
         </Link>
         <Link
           href={"/contact"}
@@ -32,6 +35,8 @@ export default function Nav() {
           <li className="hover:font-bold">Contact Us</li>
         </Link>
       </ul>
+      <div className="absolute w-full left-0 border-b-4 border-red-600 bottom-3" />
+      <div className="absolute w-full left-0 border-b-4 border-black bottom-1" />
     </nav>
   );
 }

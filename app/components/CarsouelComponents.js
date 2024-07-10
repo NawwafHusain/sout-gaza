@@ -11,12 +11,14 @@ import {
 
 export default function CarsouelComponents() {
   return (
-    <div className="w-full md:w-[48vw] md:h-[70vh] h-[50vh] relative">
-      <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-7xl font-bold text-white">
+    <div className="w-full md:w-[48vw] md:h-[70vh] h-full relative ">
+      <h2
+        className={`absolute bottom-2 text-center  z-10 text-[5vw] font-bold text-white w-full text-border  `}
+      >
         GAZA NOW
       </h2>
       <Carousel
-        className="w-full h-full"
+        className="w-full h-full relative"
         opts={{ loop: true }}
         plugins={[
           Autoplay({
@@ -25,7 +27,7 @@ export default function CarsouelComponents() {
         ]}
       >
         {" "}
-        <CarouselContent className="w-full md:w-[48vw] md:h-[70vh] h-[50vh] relative ">
+        <CarouselContent className="w-full  md:h-[70vh] h-full relative ">
           {images.map((img, index) => (
             <CarouselItem key={index} className="h-full ">
               <Image

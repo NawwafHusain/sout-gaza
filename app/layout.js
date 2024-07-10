@@ -4,8 +4,12 @@ import Image from "next/image";
 import Nav from "./components/Nav";
 import { Cairo } from "next/font/google";
 import Footer from "./components/Footer";
+import { Oswald } from "next/font/google";
 
-const cairo = Cairo({ subsets: ["latin"] });
+export const cairo = Cairo({ subsets: ["latin"] });
+export const oswald = Oswald({
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",

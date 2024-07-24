@@ -119,19 +119,21 @@ export default function Home() {
           </h2>
           <p className={`text-xl   ${cairo.className} `}>
             <br />
-            To Reach "Voice of Gaza" This initiative is open to all individuals,
-            institutions, and companies. It aims to help the people of Gaza cope
-            with the aftermath of the war and its harsh and difficult impact on
-            their lives. The people of Gaza need work now more than ever, after
-            hundreds of thousands have lost their jobs and poverty and
-            unemployment rates have doubled alarmingly, especially among women
-            and youth. <br />
+            To Reach &apos;Voice of Gaza&apos; This initiative is open to all
+            individuals, institutions, and companies. It aims to help the people
+            of Gaza cope with the aftermath of the war and its harsh and
+            difficult impact on their lives. The people of Gaza need work now
+            more than ever, after hundreds of thousands have lost their jobs and
+            poverty and unemployment rates have doubled alarmingly, especially
+            among women and youth. <br />
             <br />
             We understand that many jobs in the labor market have become
             available remotely, whether full-time or part-time, which suits the
             reality of Gazans: <br />
             <br />
-            <span className="font-bold">To reach "Voice of Gaza":</span>{" "}
+            <span className="font-bold">
+              To reach &apos;Voice of Gaza&apos;:
+            </span>{" "}
           </p>
           <ul className=" list-disc list-outside gap-1 flex flex-col">
             <li>

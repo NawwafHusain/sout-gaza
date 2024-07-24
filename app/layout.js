@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import { Cairo } from "next/font/google";
 import Footer from "./components/Footer";
 import { Oswald } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 export const cairo = Cairo({ subsets: ["latin"] });
 export const oswald = Oswald({
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         <Nav />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

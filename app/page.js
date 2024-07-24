@@ -1,8 +1,11 @@
 import {
   ArrowRightCircle,
+  Bone,
   Briefcase,
+  DollarSign,
   House,
   PersonStanding,
+  Wheat,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -21,39 +24,65 @@ export default function Home() {
             Let it Bring <span>Hope</span>
             <br /> Let it Be a Tale.
           </h1>
-          <p className="w-[80%] text-lg">
+          {/* <p className="w-[80%] text-lg">
             Join us in our mission to provide a stable future for Gazans.
-          </p>
-          <div className="flex flex-col items-start gap-4">
-            <div className="flex justify-center items-center gap-4">
-              <Briefcase className="text-white w-12  h-12 bg-primary rounded-full p-2" />
-              <p className="text-lg font-bold text-left">
-                80% of Gazans
-                <br />{" "}
-                <span className="text-muted-foreground font-normal">
-                  are currently unemployed
-                </span>
-              </p>
+          </p> */}
+          <div className="flex flex-row gap-10">
+            <div className="flex flex-col items-start gap-4">
+              <div className="flex justify-center items-center gap-4">
+                <Briefcase className="text-white w-12  h-12 bg-primary rounded-full p-2" />
+                <p className="text-lg font-bold text-left">
+                  80% of Gazans
+                  <br />{" "}
+                  <span className="text-muted-foreground font-normal">
+                    are currently unemployed
+                  </span>
+                </p>
+              </div>
+
+              <div className="flex justify-center items-center gap-4">
+                <Wheat className="text-white w-12  h-12 bg-primary rounded-full p-2" />
+                <p className="text-lg font-bold text-left">
+                  90% of Agricultural
+                  <br />{" "}
+                  <span className="text-muted-foreground font-normal">
+                    yield has been disrupted{" "}
+                  </span>
+                </p>
+              </div>
+              <div className="flex justify-center items-center gap-4">
+                <DollarSign className="text-white w-12  h-12 bg-primary rounded-full p-2" />
+                <p className="text-lg font-bold text-left">
+                  84%
+                  <br />{" "}
+                  <span className="text-muted-foreground font-normal">
+                    Economic Recession{" "}
+                  </span>
+                </p>
+              </div>
             </div>
-            <div className="flex justify-center items-center gap-4">
-              <House className="text-white w-12  h-12 bg-primary rounded-full p-2" />
-              <p className="text-lg font-bold text-left">
-                65% of Buildings
-                <br />{" "}
-                <span className="text-muted-foreground font-normal">
-                  in Gaza have been destroyed{" "}
-                </span>
-              </p>
-            </div>
-            <div className="flex justify-center items-center gap-4">
-              <PersonStanding className="text-white w-12  h-12 bg-primary rounded-full p-2" />
-              <p className="text-lg font-bold text-left">
-                1.7 million people
-                <br />{" "}
-                <span className="text-muted-foreground font-normal">
-                  in Gaza are currently displaced{" "}
-                </span>
-              </p>
+            <div className="flex flex-col items-start gap-4">
+              <div className="flex justify-center items-center gap-4">
+                <PersonStanding className="text-white w-12  h-12 bg-primary rounded-full p-2" />
+                <p className="text-lg font-bold text-left">
+                  90% of Gazans
+                  <br />{" "}
+                  <span className="text-muted-foreground font-normal">
+                    are currently in poverty
+                  </span>
+                </p>
+              </div>
+
+              <div className="flex justify-center items-center gap-4">
+                <Briefcase className="text-white w-12  h-12 bg-primary rounded-full p-2" />
+                <p className="text-lg font-bold text-left">
+                  200,000 Gazas
+                  <br />{" "}
+                  <span className="text-muted-foreground font-normal">
+                    lost thier jobs{" "}
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
 
@@ -74,28 +103,57 @@ export default function Home() {
           className="w-full md:w-[48vw] md:h-[70vh] h-[50vh] object-cover rounded-2xl relative"
         /> */}
       </section>
-      <section className="w-screen flex-col-reverse lg:flex-row md:h-[90vh] mt-[15vh] lg:pt-32 flex items-start justify-between px-20  gap-10 relative  md:-translate-y-[14vh] bg-black text-white ">
+      <section
+        id="help"
+        className="w-screen flex-col-reverse lg:flex-row h-max  mt-[15vh] lg:pt-32 flex items-start justify-between px-20  gap-10 relative  md:pb-[10vh] bg-black text-white "
+      >
         {/* <Image
           src={"/images/section2bg.png"}
           width={1000}
           height={1000}
           className="w-screen absolute left-0   lg:top-0 -top-[15vh] -z-10"
         /> */}
-        <div className="md:w-[40vw] flex flex-col gap-4">
+        <div className="md:w-[40vw] h-max flex flex-col gap-4">
           <h2 className={`text-3xl font-bold   ${cairo.className}`}>
-            Who are we?{" "}
+            How you can help?{" "}
           </h2>
-          <p className={`text-2xl   ${cairo.className} lg:h-[40vh]`}>
+          <p className={`text-xl   ${cairo.className} `}>
             <br />
-            &quot;Voices of Gaza&quot; is a non-profit volunteer group that
-            seeks to help our people in Gaza find suitable job opportunities and
-            empower them professionally, in line with their skills. Priority is
-            given to citizens of the Gaza Strip residing there, with a focus on
-            Gazan women to find job opportunities for them in the Strip, or
-            remotely. Voice of Gaza works with job seekers to prepare CVs in
-            Arabic, English and French and train them for job interviews
+            To Reach "Voice of Gaza" This initiative is open to all individuals,
+            institutions, and companies. It aims to help the people of Gaza cope
+            with the aftermath of the war and its harsh and difficult impact on
+            their lives. The people of Gaza need work now more than ever, after
+            hundreds of thousands have lost their jobs and poverty and
+            unemployment rates have doubled alarmingly, especially among women
+            and youth. <br />
+            <br />
+            We understand that many jobs in the labor market have become
+            available remotely, whether full-time or part-time, which suits the
+            reality of Gazans: <br />
+            <br />
+            <span className="font-bold">To reach "Voice of Gaza":</span>{" "}
           </p>
-          <p className={`text-2xl   ${cairo.className}`}>
+          <ul className=" list-disc list-outside gap-1 flex flex-col">
+            <li>
+              Follow the content published on this website and on social media
+              platforms.
+            </li>
+            <li>
+              If you have a private business or work for a company, you can
+              choose Gaza talents and offer them available jobs.
+            </li>
+            <li>
+              Share information or CVs of available talents with your family,
+              relatives, and friends.
+            </li>
+            <li>
+              {" "}
+              Donate your time to help prepare and qualify Gazans for the job
+              market.
+            </li>
+          </ul>
+
+          <p className={`text-2xl mt-10  ${cairo.className}`}>
             Kindly send your CVs to
             <br />
             <span className="font-bold">CV@SoutGaza.com</span>
@@ -103,25 +161,49 @@ export default function Home() {
         </div>
         <div className="md:w-[40vw] flex flex-col gap-4">
           <h2 className={`text-3xl font-bold text-right ${cairo.className}`}>
-            مَنْ نحن؟
+            لكي يصل صوت غزة
           </h2>
-          <p className={`text-2xl text-right ${cairo.className} lg:h-[40vh]`}>
+          <p className={`text-xl leading-8 text-right ${cairo.className} `}>
             <br />
-            &quot;صوت غزة&quot; مجموعة تطوعية غير ربحية، تسعى لمساعدة أهلنا في
-            غزة لإيجاد فرص عمل مناسبة، وتمكينهم مهنياً، بما يتوافق مع مهاراتهم.
-            الأولوية لمواطني قطاع غزة المقيمين فيه، مع تركيز على الغزيات لإيجاد
-            فرص عمل لهنّ في القطاع، أو عن بعد. &quot;صوت غزة&quot; تعمل مع طالبي
-            الوظائف لإعداد سير ذاتية باللغات العربية والإنجليزية والفرنسية
-            وتدريبهم على مقابلات العمل.
+            هذه مبادرة مفتوحة لكل الأفراد والمؤسسات والشركات. تسعى إلى مساعدة
+            الغزيين على احتواء تداعيات الحرب، وما تركته من نتائج صعبة وقاسية على
+            حياتهم. يحتاج الغزيون والغزّيات إلى العمل الآن، أكثر من أي وقت مضى،
+            بعدما فقد مئات الآلاف وظائفهم، وتضاعفت أرقام الفقر والبطالة على نحو
+            مرعب، خصوصاً في صفوف النساء والشباب.
+            <br />
+            <br /> نُدرك أنّ كثيراً من الوظائف في سوق العمل أصبحت متاحةً عن بعد،
+            سواء بالدوام الكامل، أو الجزئي، ما يتلاءم مع واقع الغزيين:
+            <br />
+            <br /> لكي يصل صوت غزة:
           </p>
-          <p className={`text-2xl text-right ${cairo.className}`}>
+
+          <ul
+            className=" list-disc list-inside  gap-1 flex flex-col text-right "
+            dir="rtl"
+          >
+            <li className="text-right list-inside">
+              تابع المحتوى المنشور على هذا الموقع، وفي المنصات الاجتماعية.
+            </li>
+            <li className="text-right list-inside">
+              إذا كان لديك عمل خاص أو تعمل في شركة، يمكنك اختيار مواهب غزية،
+              وتقديمها للوظائف المتوفرة.
+            </li>
+            <li className="text-right list-inside">
+              شارك عائلتك وأقاربك وأصدقاءك معلومات أو سِيَراً ذاتية للمواهب
+              الموجودة.
+            </li>
+            <li className="text-right list-inside">
+              {" "}
+              تبرّع بوقتك للمساعدة في إعداد وتأهيل الغزيين لسوق العمل.
+            </li>
+          </ul>
+          <p className={`text-2xl text-right mt-10 ${cairo.className}`}>
             يرجى إرسال السير الذاتية إلى
             <br />
             <span className="font-bold">CV@SoutGaza.com</span>
           </p>
         </div>
       </section>
-      <Help />
     </main>
   );
 }

@@ -13,21 +13,21 @@ export default function Nav() {
         src="/images/Logo.png"
         width={300}
         height={300}
-        className="lg:w-[11vw] object-contain"
+        className="lg:w-[15vw] object-contain"
       />
-      <ul className="flex  gap-4 md:text-xl md:absolute md:left-1/2 md:-translate-x-1/2 md:top-auto  md:w-auto w-max text-lg">
+      <ul className="flex  gap-8 md:text-xl md:absolute md:left-1/2 md:-translate-x-1/2 md:top-auto  md:w-auto w-max text-lg">
         <Link href={"/"} className={`${path == "/" && "underline"}`}>
           <li className="hover:font-bold">Home</li>
         </Link>
         <Link href={"/about"} className={`${path == "/about" && "underline"}`}>
           <li className="hover:font-bold">About Us</li>
         </Link>
-        <Link
+        {/* <Link
           href={"/talents"}
           className={`${path == "/talents" && "underline"}`}
         >
           <li className="hover:font-bold">Gazan Talents</li>
-        </Link>
+        </Link> */}
         <Link
           href={"/contact"}
           className={`${path == "/contact" && "underline"}`}

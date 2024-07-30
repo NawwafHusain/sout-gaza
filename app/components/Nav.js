@@ -22,12 +22,12 @@ export default function Nav() {
         <Link href={"/about"} className={`${path == "/about" && "underline"}`}>
           <li className="hover:font-bold">About Us</li>
         </Link>
-        {/* <Link
+        <Link
           href={"/talents"}
           className={`${path == "/talents" && "underline"}`}
         >
           <li className="hover:font-bold">Gazan Talents</li>
-        </Link> */}
+        </Link>
         <Link
           href={"/contact"}
           className={`${path == "/contact" && "underline"}`}

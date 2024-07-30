@@ -1,6 +1,9 @@
 import React from "react";
 import { oswald } from "../layout";
 import Image from "next/image";
+
+import Link from "next/link";
+
 export default function Page() {
   return (
     <main
@@ -8,24 +11,21 @@ export default function Page() {
     >
       <h1 className="text-[6vw]">GAZAN TALENTS</h1>
       <h2 className="text-[2vw]">Persevered through adversity</h2>
-      <div className="grid grid-cols-2 gap-x-8  px-10 mb-24 mt-16">
+      <div className="flex flex-col w-[60vw] mt-10 mb-24 gap-4">
         {heros.map((hero, index) => (
           <div
-            className="flex  items-start justify-center gap-4 mb-8"
+            className="flex flex-row  gap-10 flex-1 justify-between h-full"
             key={index}
           >
-            <Image
-              src={hero.img}
-              alt={hero.name}
-              width={500}
-              height={500}
-              className="w-[50%]"
-            />
-
-            <div className="flex flex-col gap-4">
-              <h3 className="text-[2vw]">{hero.name}</h3>
-              <p className="text-[1.5vw]">{hero.paragraph}</p>
-            </div>
+            <h3 className="text-[2vw]">{hero.name}</h3>
+            {/* <p className="text-[1.5vw]">{hero.paragraph}</p> */}
+            <Link
+              href={`/CVs/${hero.cv}`}
+              target="_blank"
+              className="border-2 border-black hover:border-transparent  shadow-lg rounded-md px-4 py-3 text-center self-end"
+            >
+              View CV
+            </Link>
           </div>
         ))}
       </div>
@@ -35,33 +35,48 @@ export default function Page() {
 
 const heros = [
   {
-    name: "Abdullah",
+    name: "Aya Hammad",
     img: "/images/rubble1.avif",
-    paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quasi. Quo, quod.",
+    cv: "aya.pdf",
   },
   {
-    name: "Abdullah",
+    name: "Mousa Yousef Abu Harbid ",
     img: "/images/rubble1.avif",
-    paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quasi. Quo, quod.",
+    cv: "mousa.pdf",
   },
   {
-    name: "Abdullah",
+    name: "Maher A. H . Al-Talla",
     img: "/images/rubble1.avif",
-    paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quasi. Quo, quod.",
+    cv: "maher.pdf",
   },
   {
-    name: "Abdullah",
+    name: "Eisha Saleh Hashem Zaqzouq",
     img: "/images/rubble1.avif",
-    paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quasi. Quo, quod.",
-  },
-  {
-    name: "Abdullah",
-    img: "/images/rubble1.avif",
-    paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quasi. Quo, quod.",
+    cv: "eisha.pdf",
   },
 ];
+
+// <div
+// className="flex  items-start justify-center gap-4 mb-8"
+// key={index}
+// >
+// <Image
+//   src={hero.img}
+//   alt={hero.name}
+//   width={500}
+//   height={500}
+//   className="w-[50%]"
+// />
+
+// <div className="flex flex-col gap-4 flex-1 justify-between h-full">
+//   <h3 className="text-[2vw]">{hero.name}</h3>
+//   {/* <p className="text-[1.5vw]">{hero.paragraph}</p> */}
+//   <Link
+//     href={`/CVs/${hero.cv}`}
+//     target="_blank"
+//     className="border-2 border-black hover:border-0  shadow-lg rounded-md px-4 py-3 text-center self-end"
+//   >
+//     View CV
+//   </Link>
+// </div>
+// </div>

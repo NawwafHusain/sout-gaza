@@ -8,15 +8,16 @@ export default function Page() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     toast.loading("Sending...");
-    console.log(e.target.firstName.value);
-    const data = {
-      fname: e.target.firstName.value,
-      lname: e.target.lastName.value,
-      code: e.target.code.value,
-      number: e.target.number.value,
-      message: e.target.message.value,
-    };
-    console.log(data);
+    // console.log(e.target.firstName.value);
+    // const data = {
+    //   fname: e.target.firstName.value,
+    //   lname: e.target.lastName.value,
+    //   code: e.target.code.value,
+    //   number: e.target.number.value,
+    //   email: e.target.Email.value,
+    //   message: e.target.message.value,
+    // };
+    // console.log(data);
     try {
       const res = await fetch("/api/contact", {
         body: JSON.stringify({
@@ -24,6 +25,7 @@ export default function Page() {
           lname: e.target.lastName.value,
           code: e.target.code.value,
           number: e.target.number.value,
+          email: e.target.Email.value,
           message: e.target.message.value,
         }),
         headers: {
@@ -49,6 +51,7 @@ export default function Page() {
       );
     }
   };
+
   return (
     <section className="text-black w-[100vw] md:h-[86vh] flex flex-col lg:flex-row  md:px-12 items-start md:pt-12  gap-10  relative">
       {/* <Image
@@ -88,6 +91,15 @@ export default function Page() {
                 className="border-2 border-black px-2 py-2 "
               />
             </div>
+          </div>
+          <div className="flex-col flex md:flex-1">
+            <label htmlFor="Email">Email</label>
+            <input
+              name="Email"
+              placeholder="example@email.com"
+              required
+              className="border-2 border-black px-2 py-2 "
+            />
           </div>
           <div className="flex  gap-4">
             <div className="flex-col flex w-[20%]">

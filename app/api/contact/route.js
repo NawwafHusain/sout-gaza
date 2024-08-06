@@ -1,45 +1,41 @@
 import { NextResponse } from "next/server";
-// import Mailgun from "mailgun-js";
+import { transporter } from "@/lib/mail";
 
-export async function POST(req, res) {
-  // try {
-  //   const data = await req.json();
-  //   const mailgun = new Mailgun(data);
-  //   const mg = mailgun.client({
-  //     username: "api",
-  //     key: process.env.MAILGUN_API_KEY,
-  //   });
-  //   const res = await mg.messages.create("sandbox-123.mailgun.org", {
-  //     from: `Sout gaza Website <mailgun@sandbox5f23493fea0f425bb4a66d3bd916254a.mailgun.org>`,
-  //     to: ["nnawwafhusain@gmail.com"],
-  //     subject: "Contact Request",
-  //     text:
-  //       "you have a new contact request from soutgaza website. The details are as follows: \n\n" +
-  //       "First Name: " +
-  //       data.fname +
-  //       "\nLast Name: " +
-  //       data.lname +
-  //       "\nPhone Number: " +
-  //       data.code +
-  //       data.number +
-  //       "\nMessage: " +
-  //       data.message,
-  //     html: `<h1>you have a new contact request from soutgaza website. The details are as follows:</h1> <br> <p>First Name: ${data.fname} <br> Last Name: ${data.lname} <br> Phone Number: ${data.code} ${data.number} <br> Message: ${data.message}</p>`,
-  //   });
-  //   if (res) {
-  //     console.log(res);
-  //   }
-  //   return NextResponse.json({
-  //     status: 200,
-  //     message: "success",
-  //     data: res,
-  //   });
-  // } catch (error) {
-  //   console.log(error);
-  //   return NextResponse.json({
-  //     status: 500,
-  //     message: "error",
-  //     data: error,
-  //   });
-  // }
+export async function POST(request) {
+  try {
+    const body = await request.json();
+    console.log(body);
+
+    const testResult = await transporter.verify();
+
+    if (testResult) {
+      const res = await transporter.sendMail({
+        from: process.env.EMAIL,
+        to: "nnawwafhusain@gmail.com",
+        subject: "Sout Gaza Contact Request",
+        html: `<h1> Contact Request </h1><br/>
+        <p> ${body.fname} ${body.lname} says: ${
+          body.message
+        }</p><br/><p> Contact info: <br/> Email: ${body.email} <br/> ${
+          body.code && body.number ? `Phone: ${body.code}${body.number}` : ``
+        } </p>`,
+      });
+
+      if (res) {
+        return NextResponse.json({
+          message: "Success",
+        });
+      } else {
+        throw new Error("Failed to send email");
+      }
+    }
+    return NextResponse.json({
+      message: "Error",
+    });
+  } catch (error) {
+    console.log(error);
+    return NextResponse.json({
+      message: "Error",
+    });
+  }
 }

@@ -10,14 +10,14 @@ import {
 import Image from "next/image";
 
 import { oswald, cairo } from "./layout";
-import CarsouelComponents from "./components/CarsouelComponents";
+import CarsouelComponent from "./components/CarsouelComponent";
 import Help from "./components/Help";
 
 export default function Home() {
   return (
     <main>
       <section className="w-screen lg:h-[90vh] h-auto flex flex-col lg:flex-row items-center justify-items-start justify-center lg:px-20 px-4 gap-4 relative ">
-        <div className="flex flex-col items-center md:items-start justify-center lg:gap-4 gap-8 md:w-[50vw] text-center lg:text-left relative w-full md:h-auto  pt-10">
+        <div className="z-10 flex flex-col items-center md:items-center justify-center lg:gap-4 gap-8 md:w-screen text-center  relative w-full md:h-auto  pt-10 text-white">
           <h1
             className={`${oswald.className} md:text-7xl text-6xl  font-semibold `}
           >
@@ -34,28 +34,28 @@ export default function Home() {
                 <p className="text-lg font-bold text-left">
                   80% of Gazans
                   <br />{" "}
-                  <span className="text-muted-foreground font-normal">
+                  <span className="text-white font-normal">
                     are currently unemployed
                   </span>
                 </p>
               </div>
 
-              <div className="flex justify-center items-center gap-4">
+              {/* <div className="flex justify-center items-center gap-4">
                 <Wheat className="text-white w-12  h-12 bg-primary rounded-full p-2" />
                 <p className="text-lg font-bold text-left">
                   90% of Agricultural
                   <br />{" "}
-                  <span className="text-muted-foreground font-normal">
+                  <span className="text-white font-normal">
                     yield has been disrupted{" "}
                   </span>
                 </p>
-              </div>
+              </div> */}
               <div className="flex justify-center items-center gap-4">
                 <DollarSign className="text-white w-12  h-12 bg-primary rounded-full p-2" />
                 <p className="text-lg font-bold text-left">
                   84%
                   <br />{" "}
-                  <span className="text-muted-foreground font-normal">
+                  <span className="text-white font-normal">
                     Economic Recession{" "}
                   </span>
                 </p>
@@ -67,7 +67,7 @@ export default function Home() {
                 <p className="text-lg font-bold text-left">
                   90% of Gazans
                   <br />{" "}
-                  <span className="text-muted-foreground font-normal">
+                  <span className="text-white font-normal">
                     are currently in poverty
                   </span>
                 </p>
@@ -78,7 +78,7 @@ export default function Home() {
                 <p className="text-lg font-bold text-left">
                   200,000 Gazas
                   <br />{" "}
-                  <span className="text-muted-foreground font-normal">
+                  <span className="text-white font-normal">
                     lost thier jobs{" "}
                   </span>
                 </p>
@@ -95,7 +95,7 @@ export default function Home() {
           </a>
         </div>
 
-        <CarsouelComponents />
+        <CarsouelComponent />
         {/* <Image
           src="/images/rubble1.avif"
           width={1000}

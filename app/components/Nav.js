@@ -8,7 +8,7 @@ export default function Nav() {
   const path = usePathname();
 
   return (
-    <nav className="w-full lg:flex-row flex-col  flex  items-center px-24 lg:pt-4 pt-2  pb-6 border-b-4 border-primary relative">
+    <nav className="w-full lg:flex-row flex-col  flex  items-center px-24 lg:pt-4 pt-2  pb-6 border-b-4 border-primary relative z-[100] bg-white">
       <Image
         src="/images/Logo.png"
         width={300}

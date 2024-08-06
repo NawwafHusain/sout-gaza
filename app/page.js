@@ -27,7 +27,7 @@ export default function Home() {
           {/* <p className="w-[80%] text-lg">
             Join us in our mission to provide a stable future for Gazans.
           </p> */}
-          <div className="flex flex-row gap-10">
+          <div className="flex md:flex-row flex-col gap-2">
             <div className="flex flex-col items-start gap-4">
               <div className="flex justify-center items-center gap-4">
                 <Briefcase className="text-white w-12  h-12 bg-primary rounded-full p-2" />
@@ -87,12 +87,17 @@ export default function Home() {
           </div>
 
           <a
-            className="bg-primary text-white text-2xl font-bold py-4 pr-20 pl-8 rounded-full   flex justify-between items-center gap-4 mt-10 relative hover:bg-green-800"
+            className="bg-primary text-white text-2xl font-bold py-4 pr-20 pl-8 rounded-full   flex justify-between items-center gap-4 lg:mt-10 relative hover:bg-green-800"
             href="#help"
           >
             Learn how you can help
             <ArrowRightCircle className="w-12 h-12 text-primary-foreground absolute right-2" />
           </a>
+          <h2
+            className={`lg:hidden  bottom-2 text-center z-10 text-[8vw] font-bold text-white w-full text-border  `}
+          >
+            GAZA NOW
+          </h2>
         </div>
 
         <CarsouelComponent />
@@ -105,7 +110,7 @@ export default function Home() {
       </section>
       <section
         id="help"
-        className="w-screen flex-col-reverse lg:flex-row h-max  mt-[15vh] lg:pt-32 flex items-start justify-between px-20  gap-10 relative  md:pb-[10vh] bg-black text-white "
+        className="w-screen flex-col-reverse lg:flex-row h-max  mt-[15vh] lg:pt-32 pt-24 pb-16 flex items-start justify-between px-4 lg:px-20  gap-10 relative  md:pb-[10vh] bg-black text-white "
       >
         {/* <Image
           src={"/images/section2bg.png"}

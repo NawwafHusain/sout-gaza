@@ -11,7 +11,7 @@ export default function page() {
         className="lg:w-[11vw] object-cover"
       />
       <div className="absolute w-full h-full bg-black opacity-50 top-0 left-0" />
-      <div className="relative w-full min-h-max flex flex-col lg:flex-row items-center lg:items-start justify-center gap-4 px-20 py-24">
+      <div className="relative w-full min-h-max flex flex-col lg:flex-row items-center lg:items-start justify-center gap-4 lg:px-20 px-4 py-24">
         <div className="md:w-[40vw] flex flex-col gap-4 text-left">
           <h2 className={`text-3xl font-bold   ${cairo.className}`}>
             Who are we?{" "}

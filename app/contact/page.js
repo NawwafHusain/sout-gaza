@@ -53,7 +53,7 @@ export default function Page() {
   };
 
   return (
-    <section className="text-black w-[100vw] md:h-[86vh] flex flex-col lg:flex-row  md:px-12 items-start md:pt-12  gap-10  relative">
+    <section className="text-black w-[100vw] md:h-[86vh] flex flex-col lg:flex-row  md:px-12 items-start md:pt-12  gap-10  relative overflow-x-hidden">
       {/* <Image
         src="/images/original.jpg"
         width={1000}
@@ -61,7 +61,7 @@ export default function Page() {
         className="w-[50vw] h-[90%] object-cover"
       /> */}
       <CarsouelComponents />
-      <div className="flex-1 flex flex-col items-start">
+      <div className="flex-1 flex flex-col items-start px-4 lg:px-0 lg:w-auto max-w-[95vw] self-center py-24 lg:py-0">
         <div className="flex flex-col text-center md:text-left items-center  md:justify-between">
           <h2 className="text-4xl md:text-7xl font-extrabold">Contact Us</h2>
         </div>
@@ -77,7 +77,7 @@ export default function Page() {
               <label htmlFor="firstName">First Name</label>
               <input
                 name="firstName"
-                placeholder="John"
+                placeholder=""
                 required
                 className="border-2 border-black px-2 py-2 "
               />
@@ -86,7 +86,7 @@ export default function Page() {
               <label htmlFor="lastName">Last Name</label>
               <input
                 name="lastName"
-                placeholder="Smith"
+                placeholder=""
                 required
                 className="border-2 border-black px-2 py-2 "
               />
@@ -106,7 +106,7 @@ export default function Page() {
               <label htmlFor="code">Code</label>
               <input
                 name="code"
-                placeholder="+971"
+                placeholder="+962"
                 className="border-2 border-black px-2 py-2 "
               />
             </div>
@@ -114,7 +114,7 @@ export default function Page() {
               <label htmlFor="number">Number</label>
               <input
                 name="number"
-                placeholder="5x xxx xxxx"
+                placeholder="7x xxx xxxx"
                 className="border-2 border-black px-2 py-2 "
               />
             </div>
@@ -129,7 +129,7 @@ export default function Page() {
               className="border-2 border-black px-2 py-2  flex text-start h-[20vh] resize-none"
             />
           </div>
-          <button className="border-2 border-black bg-black  text-white hover:bg-transparent hover:text-black md:w-[30%] py-2  self-center">
+          <button className="border-2 border-black bg-black  text-white hover:bg-transparent hover:text-black md:w-[30%] py-2 px-10 self-center">
             Send
           </button>
         </form>

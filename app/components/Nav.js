@@ -15,7 +15,7 @@ export default function Nav() {
         height={300}
         className="lg:w-[15vw] object-contain"
       />
-      <ul className="flex  gap-8 md:text-xl md:absolute md:left-1/2 md:-translate-x-1/2 md:top-auto  md:w-auto w-max text-lg">
+      <ul className="flex  lg:gap-8 gap-4 md:text-xl md:absolute md:left-1/2 md:-translate-x-1/2 md:top-auto  md:w-auto w-max text-lg">
         <Link href={"/"} className={`${path == "/" && "underline"}`}>
           <li className="hover:font-bold">Home</li>
         </Link>

@@ -11,7 +11,7 @@ import {
 
 export default function CarsouelComponents() {
   return (
-    <div className="w-full md:w-[48vw] md:h-[70vh] h-full relative ">
+    <div className="w-full md:w-[48vw] md:h-[70vh] h-full relative hidden md:block ">
       <h2
         className={`absolute bottom-2 text-center  z-10 text-[5vw] font-bold text-white w-full text-border  `}
       >

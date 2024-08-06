@@ -9,15 +9,15 @@ export default function Page() {
     <main
       className={`flex flex-col items-center justify-start ${oswald.className}`}
     >
-      <h1 className="text-[6vw]">GAZAN TALENTS</h1>
-      <h2 className="text-[2vw]">Persevered through adversity</h2>
-      <div className="flex flex-col w-[60vw] mt-10 mb-24 gap-4">
+      <h1 className="lg:text-[6vw] text-[8vw] mt-10 lg:mt-0">GAZAN TALENTS</h1>
+      <h2 className="lg:text-[2vw] text-[4vw]">Persevered through adversity</h2>
+      <div className="flex flex-col lg:w-[60vw] mt-10 mb-24 gap-4">
         {heros.map((hero, index) => (
           <div
-            className="flex flex-row  gap-10 flex-1 justify-between h-full"
+            className="flex flex-row  gap-10 flex-1 justify-between lg:items-start items-center h-full"
             key={index}
           >
-            <h3 className="text-[2vw]">{hero.name}</h3>
+            <h3 className="lg:text-[2vw] text-[5vw]">{hero.name}</h3>
             {/* <p className="text-[1.5vw]">{hero.paragraph}</p> */}
             <Link
               href={`/CVs/${hero.cv}`}

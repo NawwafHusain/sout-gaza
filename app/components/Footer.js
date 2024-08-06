@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="w-full h-auto border-t-4 border-primary text-black flex flex-col lg:flex-row gap-10 lg:gap-10 justify-between items-center lg:px-[20vh] py-10 relative">
       <div className="absolute w-full left-0 border-b-4 border-red-600 top-3" />
       <div className="absolute w-full left-0 border-b-4 border-black top-1" />
-      <div className="flex flex-col justify-start items-start">
+      <div className="flex flex-col justify-start lg:items-start items-center">
         <Image
           src="/images/Logo.png"
           width={300}

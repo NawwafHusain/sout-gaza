@@ -11,9 +11,9 @@ import {
 
 export default function CarsouelComponent() {
   return (
-    <div className="w-full md:w-screen md:h-screen h-full absolute z-0 ">
+    <div className="w-full md:w-screen md:h-screen h-screen absolute z-0 ">
       <h2
-        className={`absolute bottom-2 text-center z-10 text-[5vw] font-bold text-white w-full text-border  `}
+        className={`absolute hidden lg:block bottom-2 text-center z-10 text-[5vw] font-bold text-white w-full text-border  `}
       >
         GAZA NOW
       </h2>
@@ -27,7 +27,7 @@ export default function CarsouelComponent() {
         ]}
       >
         {" "}
-        <CarouselContent className="w-full  md:h-screen h-full relative">
+        <CarouselContent className="w-full  md:h-screen h-screen relative">
           {images.map((img, index) => (
             <CarouselItem key={index} className="h-full ">
               <Image

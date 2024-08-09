@@ -7,11 +7,11 @@ export async function POST(request) {
     console.log(body);
 
     const testResult = await transporter.verify();
-
+    console.log(testResult);
     if (testResult) {
       const res = await transporter.sendMail({
         from: process.env.EMAIL,
-        to: "nnawwafhusain@gmail.com",
+        to: "CV@soutgaza.com",
         subject: "Sout Gaza Contact Request",
         html: `<h1> Contact Request </h1><br/>
         <p> ${body.fname} ${body.lname} says: ${
